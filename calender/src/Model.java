@@ -20,11 +20,31 @@ public class Model {
 import java.time.*;
 
 public class Model {
-
+	
+	// 실습 - 입력받은 날짜와 오늘 날짜의 차이구하기
 	public Period countdown(LocalDate d) {
         LocalDate today = LocalDate.now();
         Period p = Period.between(today,d);
         return p;
+	}
+	
+	// 과제 #1 - 오늘날짜로 부터 100뒤의 날짜구하기
+	public LocalDate hundredDaysFromToday() {
+		
+		// Get now Date
+		LocalDate today = LocalDate.now();
+		LocalDate hundredDayPlusDay = today.plusDays(100);
+		// Plus 100 Days with Now Date
+		
+		return hundredDayPlusDay;
+	}
+	
+	// 과제 #2 - 입력받은 날짜로 부터 100뒤의 날짜 구하기
+	public LocalDate hundredDaysFromInputDay(LocalDate d) {
+		
+		LocalDate hundredDayPlusInputDay = d.plusDays(100);
+		
+		return hundredDayPlusInputDay;
 	}
 
 }
