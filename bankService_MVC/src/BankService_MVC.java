@@ -5,5 +5,5 @@ public class BankService_MVC {
 		ViewOut o  = new ViewOut();
 		ViewIn i = new ViewIn();
 		new Controller().controlCalculatorProgram(m,i,o);
-	}
+	} 
 }
