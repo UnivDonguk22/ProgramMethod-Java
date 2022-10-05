@@ -1,21 +1,23 @@
 
 import javax.swing.*;
+
 public class PurseViewIn {
-	
+
 	
 	/*
 	 * Input "+" or "-"
 	 */
 	public char readRequest(String message) {
-		String input = JOptionPane.showInputDialog(message);
+		String input = JOptionPane.showInputDialog(null, message);
 		return input.charAt(0);
 	}
+	
 	
 	/*
 	 * Input Amount
 	 */
 	public int readAmount(String message) {
-		String input = JOptionPane.showInputDialog(message);
+		String input = JOptionPane.showInputDialog(null, message);
 		input = input.trim();
 	
 		if (input.length() > 0)

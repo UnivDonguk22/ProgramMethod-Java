@@ -1,7 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
 
+/*
+ *  해당 클래스는 클래스를 JPanel을 상속받았다.
+ *  extends 명령으로 부모 클래스를 상속받음.
+ */
 public class PurseViewOut extends JPanel {
+	
 	private PurseModel purse;
 	String last_transaction;
 
@@ -12,6 +17,11 @@ public class PurseViewOut extends JPanel {
 
 		purse = p;
 		JFrame f = new JFrame();
+		
+		/*
+		 * 	프로그램 첫 실행을 위해 last_transcation 필드변수 초기화 ㅎ
+		 */
+		last_transaction = "비활성";
 
 		f.getContentPane().add(this);
 		f.setTitle(title);
@@ -36,7 +46,7 @@ public class PurseViewOut extends JPanel {
 
 	
 	/*
-	 * ??
+	 * 지갑 기능 정상 작동 시 출력
 	 */
 	public void showTransaction(int amount, String message) {
 
@@ -46,7 +56,7 @@ public class PurseViewOut extends JPanel {
 	}
 
 	/*
-	 * ??
+	 * 지갑 기능 예외 작동 시 출력
 	 */
 	public void showTransaction(String message) {
 
