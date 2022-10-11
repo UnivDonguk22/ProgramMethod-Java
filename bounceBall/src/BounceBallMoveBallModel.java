@@ -22,8 +22,6 @@ public class BounceBallMoveBallModel {
     }
 
     
-    
-    
     /** xPosition - 공의 x축 위치 리턴 */
     public int xPosition() {
         return x_pos;
