@@ -13,9 +13,9 @@ public class Clock_AnalogWriter extends JPanel {
 	
 	/*
 	 *  전역변수 정리
-	 *  	- SIZE : 반지름
+	 *  	- SIZE : 시계 반지름
 	 *  	- MARGIN : 동심원 출력비율
-	 *  	- diameter : 동심원 반지
+	 *  	- diameter : 동심원 반지름
 	 */
 	private final int SIZE;
 	// private final int MARGIN;
@@ -142,7 +142,7 @@ public class Clock_AnalogWriter extends JPanel {
 		
 	}
 	
-	//for test
+	//for test - MVC 아키텍처로 구상하지 않았기에, 하나의 파일에 main 실행 메소드가 존재
 	public static void main(String[] args) {
 		new Clock_AnalogWriter(300);
 	}

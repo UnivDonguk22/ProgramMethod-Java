@@ -60,7 +60,13 @@ public class ClockAnalogViewOut extends JPanel{
 		
 		// 동심원
 		// 시간에 따른 동심원 반지름 구함.
-		this.diameter = (this.diameter >= SIZE) ? 0 : ((SIZE * time.getSecond())/60);
+		
+		// 깜빡거리는 동심원 ㅎ
+		this.diameter = (time.getSecond() == 0) ? SIZE : ((SIZE * time.getSecond())/60);
+//		this.diameter = (this.diameter > SIZE ) ? SIZE : ((SIZE * time.getSecond())/60);
+//		if (time.getSecond() == 0) {
+//			this.diameter = SIZE;
+//		}
 		int base = (SIZE - this.diameter) / 2;
 		g.setColor(Color.PINK);
 		g.fillOval(25 + base, 100 + base, this.diameter, this.diameter);
@@ -89,7 +95,7 @@ public class ClockAnalogViewOut extends JPanel{
 		// 시침 - 1파이에 6시간이 속해있음.
 		radius -= 30;
 		// draw 메소드는 정수형만 허용한다
-		double hour_angle =  (time.getHour() - 3) * Math.PI / 6;
+		double hour_angle = (time.getHour() - 3) * Math.PI / 6 + Math.PI / 6 / 60 * time.getMinute();
 		int x2_hour = (int)(x1 + radius * Math.cos(hour_angle));
 		int y2_hour = (int)(y1 + radius * Math.sin(hour_angle));
 		
