@@ -38,7 +38,7 @@ public class SlidingPuzzleViewOut extends JPanel {
             g.setColor(Color.BLACK);
             g.drawRect(x, y, SIZE, SIZE);
             int face_value = p.puzzleFace();
-            if (face_value < 10) 
+            if (face_value < 10)
                 g.drawString(face_value + "", x+11, y+20);
             else
                 g.drawString(face_value + "", x+7, y+20);
