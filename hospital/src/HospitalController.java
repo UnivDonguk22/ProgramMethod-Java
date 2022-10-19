@@ -7,6 +7,7 @@ public class HospitalController {
     private HospitalViewIn reader; // 입력 객체
     private int new_id = 1001; // 신규 환자 등록번호, 1001 = 첫 환자의 등록번호 (고유 등록 번호임 ^.^)
     
+    // 생성 메서드 - 필드변수 초기화 & {객체 선언}
     public HospitalController(HospitalMainModel h, HospitalViewOut d, HospitalViewIn r) {
         hospital = h;
         displayer = d;
@@ -25,7 +26,7 @@ public class HospitalController {
            
            System.out.println(UserSelectService);
            
-           // 입실 서비스
+           // 입실 서비스 - 자바에서 문자열 비교는 .equals() 함수를 사용한다.
            if (UserSelectService.equals("+")) {
         	   if(hospital.roomAvailable()) {
         		   

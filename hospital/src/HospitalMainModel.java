@@ -1,4 +1,7 @@
 // 다하고 Main Model 2차원 배열로 풀어보기 ㅎㅎ
+// 2차원 배열과 다른 개념... ㅎㅎ
+// 객체 타입으로 배열 객체를 생성한다.
+
 public class HospitalMainModel {
     
     private HospitalPatientModel[] rooms; // 입원실 배열 
