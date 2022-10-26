@@ -238,8 +238,11 @@ public class SudokuModel {
         // new Random().nextInt(n) 메소드를 호출하면
         // 0~n-1 범위의 정수 중에서 무작위로 하나를 고를 수 있다.
     	for (int i = 1; i <= count; i ++) {
-    		int hole_low = new Random().nextInt(8);
-    		int hole_col = new Random().nextInt(8);
+    		
+    		// nextInt의 범위는 0 ~ 입력값 - 1이다.
+    		int hole_low = new Random().nextInt(9);
+    		int hole_col = new Random().nextInt(9);
+    		System.out.println(hole_low);
     		
     		if(puzzle_board[hole_low][hole_col] != 0) {
     			puzzle_board[hole_low][hole_col] = 0;   
