@@ -1,5 +1,5 @@
 
-public class SlidingPuzzleBoardModel {
+public class SlidingPuzzleBoardModel implements SlidingPuzzleBoardInterface{
 	
 	// 2차원 배열객체 생성
 	public SlidingPuzzlePieceModel[][] board;
@@ -76,6 +76,12 @@ public class SlidingPuzzleBoardModel {
 			return false;
 		}
 		
+	}
+
+	@Override
+	// InterFace에서 board 판 객체를 등록해둠.
+	public SlidingPuzzlePieceModel[][] board() {
+		return board;
 	}
 	
 	
