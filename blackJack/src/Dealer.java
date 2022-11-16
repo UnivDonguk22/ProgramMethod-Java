@@ -1,3 +1,6 @@
+// 블랙잭 게임의 카드 덱을 관리하는 Model 클래스
+// 컴퓨터 - 유저한테 카드 뿌려줌.
+
 public class Dealer {
 
     CardDeck deck;
@@ -8,39 +11,23 @@ public class Dealer {
         deck = new CardDeck();
     }
 
-    // 카드를 다루는 메소드
+    // 카드를 원할 때까지 주는 메소드
+    /*
+     * 카드 2장을 모두 나눠준 뒤의 실행될 카드 뿌리기 메소드
+     */
     public void dealTo(CardPlayerBehavior p) {
         while (p.wantsACard()) {
-            Card c = deck.newCard();
-            p.receiveCard(c);
+           p.receiveCard(deck.newCard());
         }
-
     }
-    
-    // abstract 메소드 - 카드를 더 받고 싶은 지 의사를 물음.
-    public boolean wantsACard() {
-    	if() {
-    		return true
-    	}
-    	else {
-    		return false
-    	}
-    }
-    
-
-    
-    // dealOneTo 메소드
+   
+    // 카드를 한번만 주는 메소드
+    /*
+     * 처음 카드 2장을 나눠줄 때 사용할 카드 뿌리기 메소드
+     */
     public void dealOneTo(CardPlayerBehavior p) {
-    	
+       p.receiveCard(deck.newCard());
     }
-    
-    public static void main(String[] args) {
-        Dealer d = new Dealer();
-        HumanPlayer p = new HumanPlayer(3);
-        d.dealTo(p);
-        Card[] hand = p.showCards();
-        for (int i = 0; i < hand.length; i++) {
-            System.out.println(hand[i].getSuit() + " " + hand[i].getRank());
-        }
-    }
+   
+
 }
