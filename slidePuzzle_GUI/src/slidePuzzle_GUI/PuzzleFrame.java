@@ -21,6 +21,9 @@ public class PuzzleFrame extends JFrame {
         /*
          * 		안드로이드에서 Fragment의 Layout 영역을 Container라고 함. 
          */
+        // View 요소들을 띄울 수 있는 영역을 Container로 지정
+        // Container 내부 영역에는 Layout으로 배치됨.
+        // 가장 상위 layout 요소
         Container cp = getContentPane();
         cp.setLayout(new BorderLayout());
         
@@ -39,6 +42,8 @@ public class PuzzleFrame extends JFrame {
         
         cp.add(p1,BorderLayout.NORTH);
         cp.add(p2,BorderLayout.CENTER);
+        
+        // 슬라이드 퍼즐 보드 버튼 텍스트 초기화
         update();
         
        
