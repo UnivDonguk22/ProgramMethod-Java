@@ -29,6 +29,9 @@ public class SelectHardButton extends JButton implements ActionListener {
 		int hole_count = 54;
 		String level = "Hard Mode";
 		
+		// 난이도 GUI 창 제거
+		frame.deleteFrame();
+		
 		// 스도쿠 보드게 쉬움으로 GUI 동작
 		new SudokuBoardFrame(new SudokuBoard(hole_count), level);
 

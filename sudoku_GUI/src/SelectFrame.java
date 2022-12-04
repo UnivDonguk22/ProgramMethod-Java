@@ -30,7 +30,13 @@ public class SelectFrame extends JFrame {
         setSize(250,80);
         setVisible(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		
-		
+        
 	}
+	
+	// SelectFrame 제거 메소드
+	public void deleteFrame() {
+		setVisible(false);
+	}
+	
+	
 }

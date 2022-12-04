@@ -29,6 +29,9 @@ public class SelectMidiumButton extends JButton implements ActionListener {
 		int hole_count = 45;
 		String level = "Midium Mode";
 		
+		// 난이도 GUI 창 제거
+		frame.deleteFrame();
+		
 		// 스도쿠 보드게 쉬움으로 GUI 동작
 		new SudokuBoardFrame(new SudokuBoard(hole_count), level);
 		
